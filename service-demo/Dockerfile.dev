@@ -1,0 +1,12 @@
+
+FROM node:alpine
+
+COPY . /usr/src/app/
+
+COPY package*.json ./
+
+RUN npm install --silent
+
+WORKDIR /usr/src/app
+
+CMD ["npm", "run", "start"]
